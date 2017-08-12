@@ -23,7 +23,7 @@
     "test-watch": "jest --watch",
     "lint": "tslint src/*.ts && tslint tests/*.ts",
     "prebuild": "npm run clean",
-    "build": "./node_modules/.bin/ngc -p tsconfig.build.json",
+    "build": "$(npm bin)/ngc -p tsconfig.build.json",
     "postbuild": "npm run bundle",
     "bundle": "rollup -c",
     "clean": "rimraf build/* coverage/*",
